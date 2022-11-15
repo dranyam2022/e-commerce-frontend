@@ -1,0 +1,19 @@
+.loginlink__container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: black;
+  padding: 0.3rem;
+}
+
+.loginlink__container:hover {
+  color: white;
+  background-color: black;
+}
+
+
+@media screen and (max-width:1124px) {
+  .loginlink__container div {
+    display: none;
+  }
+}

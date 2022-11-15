@@ -1,0 +1,49 @@
+.mobilenav__links ul {
+  display: none;
+}
+
+
+.menu {
+  display: none;
+}
+
+.close {
+  display: none;
+}
+
+@media screen and (max-width:1024px) {
+  .mobilenav__links ul {
+    display: flex;
+    flex-direction: column;
+    background-color: grey;
+    position: absolute;
+    top: 5rem;
+    right: 5rem;
+    padding: 1.5rem 2rem;
+    gap: 2rem;
+  }
+
+  .mobilenav__links a {
+    color: white;
+  }
+
+  .mobilenav__links a:hover {
+    color: black;
+  }
+
+  .menu {
+    display: inline-block;
+    font-size: 1.5rem;
+    position: absolute;
+    right: 2.5rem;
+    cursor: pointer;
+  }
+
+  .close {
+    display: inline-block;
+    font-size: 1.5rem;
+    position: absolute;
+    right: 4.5rem;
+    cursor: pointer;
+  }
+}

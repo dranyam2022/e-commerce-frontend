@@ -1,0 +1,28 @@
+.nav__container {
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2rem;
+}
+
+.nav__img img {
+  max-width: 12rem;
+}
+
+.loginlinks__container {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+
+}
+
+@media screen and (max-width:1024px) {
+  .nav__container {
+    justify-content: space-between;
+  }
+
+  .loginlinks__container {
+    margin-right: 3.5rem;
+  }
+}
