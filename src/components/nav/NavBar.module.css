@@ -4,6 +4,7 @@
   justify-content: space-around;
   align-items: center;
   padding: 2rem;
+  height: 20vh;
 }
 
 .nav__img img {
@@ -14,10 +15,9 @@
   display: flex;
   gap: 1.5rem;
   align-items: center;
-
 }
 
-@media screen and (max-width:1024px) {
+@media screen and (max-width: 1024px) {
   .nav__container {
     justify-content: space-between;
   }

@@ -3,7 +3,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 3.4rem;
+  height: 80vh;
 }
 
 .image {
@@ -11,6 +11,7 @@
   object-fit: cover;
   padding: 32px;
   max-height: 400px;
+  width: 100%;
 }
 
 .right-arrow {
@@ -43,4 +44,16 @@
   opacity: 1;
   transition-duration: 1s;
   transform: scale(1.08);
+}
+
+.image_container {
+  border: 1px solid black;
+  border-radius: 15px;
+  max-width: 550px;
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    height: 80vh;
+  }
 }

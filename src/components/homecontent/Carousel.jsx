@@ -27,7 +27,8 @@ function Carousel({ slides }) {
     }
   };
 
-  console.log(current);
+  const classes = styles.image_container;
+
   return (
     <div className={styles.container}>
       <FaArrowAltCircleLeft
@@ -43,8 +44,8 @@ function Carousel({ slides }) {
           <div
             className={
               index === current
-                ? `${styles.active} ${styles.slide}`
-                : styles.slide
+                ? `${styles.active} ${styles.slide} ${classes}`
+                : `${styles.slide} ${classes}`
             }
             key={index}
           >
