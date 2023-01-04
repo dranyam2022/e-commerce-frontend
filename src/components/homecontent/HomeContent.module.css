@@ -1,0 +1,5 @@
+.homecontent__container {
+  background-color: grey;
+  width: 100%;
+  display: grid;
+}
