@@ -1,18 +1,42 @@
-import React from 'react'
-
+import React from "react";
+import { NavLink } from "react-router-dom";
+import styles from "./NavLinks.module.css";
 
 const NavLinks = () => {
-
   return (
     <ul>
-      <li><a href='#'>Home</a></li>
-      <li><a href='#'>Shop All</a></li>
-      <li><a href='#'>Mobile Phones</a></li>
-      <li><a href='#'>Tablets</a></li>
-      <li><a href='#'>Accessories</a></li>
-      <li><a href='#'>Contact Us</a></li>
+      <li>
+        <NavLink activeClassName={styles.active} to="/" end>
+          Home
+        </NavLink>
+      </li>
+      <li>
+        <NavLink activeClassName={styles.active} to="/shopall">
+          Shop All
+        </NavLink>
+      </li>
+      <li>
+        <NavLink activeClassName={styles.active} to="/mobilephones">
+          Mobile Phones
+        </NavLink>
+      </li>
+      <li>
+        <NavLink activeClassName={styles.active} to="/tablets">
+          Tablets
+        </NavLink>
+      </li>
+      <li>
+        <NavLink activeClassName={styles.active} to="/accessories">
+          Accessories
+        </NavLink>
+      </li>
+      <li>
+        <NavLink activeClassName={styles.active} to="/contactus">
+          Contact Us
+        </NavLink>
+      </li>
     </ul>
-  )
-}
+  );
+};
 
 export default NavLinks;

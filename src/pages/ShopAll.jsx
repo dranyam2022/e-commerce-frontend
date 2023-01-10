@@ -1,9 +1,22 @@
-import React from 'react'
+import React from "react";
+import { Link } from "react-router-dom";
 
 const ShopAll = () => {
   return (
-    <div>ShopAll</div>
-  )
-}
+    <div>
+      <ul>
+        <li>
+          <Link to="/product-details/:productId">Product 1</Link>
+        </li>
+        <li>
+          <Link>Product 2</Link>
+        </li>
+        <li>
+          <Link>Product 3</Link>
+        </li>
+      </ul>
+    </div>
+  );
+};
 
-export default ShopAll
+export default ShopAll;

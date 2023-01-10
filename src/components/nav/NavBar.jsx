@@ -1,19 +1,16 @@
-import React from 'react'
-import styles from './NavBar.module.css'
-import Logo from '../../assets/logo.png';
-import LoginLink from './LoginLink';
-import CartLink from './CartLink';
-import Navigation from './Navigation';
-import MobileNavigation from './MobileNavigation';
-
+import React from "react";
+import styles from "./NavBar.module.css";
+import LoginLink from "./LoginLink";
+import CartLink from "./CartLink";
+import Navigation from "./Navigation";
+import MobileNavigation from "./MobileNavigation";
+import Logo from "../logo/Logo";
 
 function Nav() {
   return (
-    <nav id='nav'>
+    <nav id="nav">
       <div className={styles.nav__container}>
-        <div className={styles.nav__img}>
-          <img src={Logo} />
-        </div>
+        <Logo />
         <Navigation />
         <MobileNavigation />
         <div className={styles.loginlinks__container}>
@@ -22,7 +19,7 @@ function Nav() {
         </div>
       </div>
     </nav>
-  )
+  );
 }
 
-export default Nav
+export default Nav;
