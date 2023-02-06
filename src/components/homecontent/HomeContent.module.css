@@ -1,4 +1,21 @@
 .homecontent__container {
-  background-color: lightgrey;
-  width: 100%;
+  background-color: white;
+  display: grid;
+  grid-template-columns: 35% 65%;
+  height: 74.4vh;
+}
+
+.homecontent__first {
+  grid-column: span 1;
+}
+
+.homecontent__second {
+  grid-column: span 1;
+}
+
+@media screen and (max-width: 1020px) {
+  .homecontent__container {
+    display: flex;
+    flex-direction: column;
+  }
 }

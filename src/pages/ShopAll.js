@@ -9,10 +9,10 @@ const ShopAll = () => {
           <Link to="/product-details/:productId">Product 1</Link>
         </li>
         <li>
-          <Link>Product 2</Link>
+          <Link to="/">Product 2</Link>
         </li>
         <li>
-          <Link>Product 3</Link>
+          <Link to="/">Product 3</Link>
         </li>
       </ul>
     </div>

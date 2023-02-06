@@ -6,7 +6,8 @@ import Navigation from "./Navigation";
 import MobileNavigation from "./MobileNavigation";
 import Logo from "../logo/Logo";
 
-function Nav() {
+
+function NavBar() {
   return (
     <nav id="nav">
       <div className={styles.nav__container}>
@@ -22,4 +23,4 @@ function Nav() {
   );
 }
 
-export default Nav;
+export default NavBar;

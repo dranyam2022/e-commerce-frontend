@@ -1,12 +1,23 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./Carousel.module.css";
-
 import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from "react-icons/fa";
 import { SliderData } from "./SliderData";
 
 function Carousel({ slides }) {
   const [current, setCurrent] = useState(0);
   const length = slides.length;
+
+  useEffect(() => {
+    const slideTimer = setInterval(() => {
+      setCurrent((prevState) => {
+        if (prevState >= length - 1) {
+          return 0;
+        } else {
+          return prevState + 1;
+        }
+      });
+    }, 3000);
+  }, [length]);
 
   if (!Array.isArray(slides) || slides.length <= 0) {
     return null;
@@ -39,6 +50,9 @@ function Carousel({ slides }) {
         className={styles["right-arrow"]}
         onClick={handlerRight}
       />
+      <div className={styles.main__container}>
+        <div className={styles.dots__container}>{}</div>
+      </div>
       {SliderData.map((slide, index) => {
         return (
           <div

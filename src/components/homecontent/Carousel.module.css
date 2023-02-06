@@ -9,7 +9,7 @@
 .image {
   border-radius: 15%;
   object-fit: cover;
-  padding: 32px;
+  padding: 40px;
   max-height: 400px;
   width: 100%;
 }
@@ -47,9 +47,21 @@
 }
 
 .image_container {
-  border: 1px solid black;
   border-radius: 15px;
   max-width: 550px;
+}
+
+.dots_container {
+  position: relative;
+  display: flex;
+  gap: 1rem;
+}
+
+.dot__item {
+  background-color: gray;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
 }
 
 @media screen and (max-width: 1024px) {

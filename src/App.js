@@ -6,38 +6,29 @@ import MobilePhones from "./pages/MobilePhones";
 import Tablets from "./pages/Tablets";
 import Accessories from "./pages/Accesories";
 import ContactUs from "./pages/ContactUs";
-import { Redirect, Route, Switch } from "react-router-dom";
 import ProductDetails from "./pages/ProductDetails";
+import RootLayout from "./pages/Root";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+// Defining routes to be rendered
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <RootLayout />,
+    children: [
+      { path: "/", element: <Home /> },
+      { path: "/shopall", element: <ShopAll /> },
+      { path: "/mobilephones", element: <MobilePhones /> },
+      { path: "/tablets", element: <Tablets /> },
+      { path: "/accessories", element: <Accessories /> },
+      { path: "/contactus", element: <ContactUs /> },
+      { path: "/productdetails", element: <ProductDetails /> },
+    ],
+  },
+]);
 
 function App() {
-  return (
-    <Switch>
-      <Route path="/shopall" exact>
-        <ShopAll />
-      </Route>
-      <Route path="/mobilephones" exact>
-        <MobilePhones />
-      </Route>
-      <Route path="/tablets" exact>
-        <Tablets />
-      </Route>
-      <Route path="/accessories" exact>
-        <Accessories />
-      </Route>
-      <Route path="/contactus" exact>
-        <ContactUs />
-      </Route>
-      <Route path="./shopall/:productId">
-        <ProductDetails />
-      </Route>
-      <Route>
-        <Home path="/home" exact />
-      </Route>
-      <Route path="*">
-        <Redirect to="/home" />
-      </Route>
-    </Switch>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;

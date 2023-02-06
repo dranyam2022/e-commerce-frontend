@@ -1,0 +1,16 @@
+.container {
+  background-color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 74vh;
+  padding: 1.5rem;
+}
+
+.flash__container {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+}

@@ -1,5 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100;0,300;0,500;0,700;0,900;1,100;1,300;1,500;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100;0,300;0,500;0,700;0,900;1,100;1,300;1,500;1,700;1,900&display=swap");
 
+/* reset css minimal */
 * {
   margin: 0;
   padding: 0;
@@ -10,32 +11,43 @@
   text-decoration: none;
 }
 
-
-body {
-  /* font-family: 'Bebas Neue', cursive; */
-  font-family: 'Montserrat', sans-serif;
-  line-height: 1.7;
-}
-
+/* global variables applied to styles */
 :root {
-  --color-bg: black;
-  --color-bg-variant: #256D85;
-  --color-bg1: #1f1f38;
-  --color-bg1-variant: #2c2c6c;
-  --color-primary: #DFF6FF;
-  --color-primary-variant: #47B5FF;
-  --color-primary1: #4db5ff;
-  --color-primary1-variant: rgba(77, 181, 255, 0.4);
-  --color-white: #fff;
-  --color-light: rgba(255, 255, 255, 0.2);
-
-  --transition: all 400ms ease;
+  --color-bg: white;
+  --color-bg-var: rgba(211, 211, 211, 1);
+  --color-primary: black;
 
   --container-width-lg: 75%;
   --container-width-md: 86%;
   --container-width-sm: 90%;
+
+  --font-primary: "Montserrat", sans-serif;
 }
 
+/* scroll behavior */
 html {
   scroll-behavior: smooth;
+}
+
+/* change place holder styling */
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: gray;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: gray;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: gray;
+}
+
+body {
+  /* font-family: 'Bebas Neue', cursive; */
+  font-family: var(--font-primary);
+  line-height: 1.7;
 }
