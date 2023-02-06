@@ -4,10 +4,10 @@ import NavBar from "../components/nav/NavBar";
 
 const RootLayout = () => {
   return (
-    <React.Fragment>
+    <main>
       <NavBar />
       <Outlet />
-    </React.Fragment>
+    </main>
   );
 };
 
