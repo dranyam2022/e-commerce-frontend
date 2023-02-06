@@ -1,38 +1,41 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import styles from "./NavLinks.module.css";
 
 const NavLinks = () => {
+  const isActive = ({ isActive }) => (isActive ? styles.active : undefined);
+
   return (
     <ul>
       <li>
-        <Link to="/" exact>
+        <NavLink to="/" className={isActive} end>
           Home
-        </Link>
+        </NavLink>
       </li>
       <li>
-        <Link to="/shopall" exact>
+        <NavLink to="/shopall" className={isActive}>
           Shop All
-        </Link>
+        </NavLink>
       </li>
       <li>
-        <Link to="/mobilephones" exact>
+        <NavLink to="/mobilephones" className={isActive}>
           Mobile Phones
-        </Link>
+        </NavLink>
       </li>
       <li>
-        <Link to="/tablets" exact>
+        <NavLink to="/tablets" className={isActive}>
           Tablets
-        </Link>
+        </NavLink>
       </li>
       <li>
-        <Link to="/accessories" exact>
+        <NavLink to="/accessories" className={isActive}>
           Accessories
-        </Link>
+        </NavLink>
       </li>
       <li>
-        <Link to="/contactus" exact>
+        <NavLink to="/contactus" className={isActive}>
           Contact Us
-        </Link>
+        </NavLink>
       </li>
     </ul>
   );
